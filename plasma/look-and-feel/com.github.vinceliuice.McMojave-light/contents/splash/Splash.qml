@@ -28,22 +28,15 @@ Image {
 
         Image {
             id: logo
-            //match SDDM/lockscreen avatar positioning
             property real size: units.gridUnit * 8
-
             anchors.centerIn: parent
-
             source: "images/logo.svg"
-
-//            sourceSize.width: 503
-//            sourceSize.height: 99
         }
 
         Image {
             id: busyIndicator
-            //in the middle of the remaining space
-            y: parent.height - (parent.height - logo.y) / 2 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: logo.bottom 
             source: "images/loading-00.svg"
             sourceSize.height: units.gridUnit * 1.5
             sourceSize.width: units.gridUnit * 1.5
